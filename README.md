@@ -5,12 +5,6 @@ docker avahi
 
 ## Quickstart
 
-### Build the Image:
-
-```bash
-docker build --build-arg AVAHI_VERSION=$(cat VERSION) -t solinderd/avahi:$(cat VERSION) .
-```
-
 ### Get initialize configuration:
 
 ```bash
@@ -19,12 +13,16 @@ docker cp $(docker ps -ql):/etc/avahi .
 docker rm $(docker ps -ql)
 ```
 
-### 
-
-2. Start the container 
+### Start the container 
 
 ```bash
 docker run -d --net=host -v $(pwd)/avahi:/etc/avahi solidnerd/avahi:0.6.32
+```
+
+## Build the image
+
+```bash
+docker build --build-arg AVAHI_VERSION=$(cat VERSION) -t solinderd/avahi:$(cat VERSION) .
 ```
 
 ## Issues
