@@ -3,9 +3,9 @@ docker avahi
 
 [![](https://images.microbadger.com/badges/image/solidnerd/avahi.svg)](http://microbadger.com/images/solidnerd/avahi "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/commit/solidnerd/avahi.svg)](https://microbadger.com/images/solidnerd/avahi "Get your own commit badge on microbadger.com")
 
-## Quickstart
+# Quickstart
 
-### Get initialize configuration:
+## Get initialize configuration:
 
 ```bash
 docker create solidnerd/avahi:0.6.32
@@ -13,7 +13,7 @@ docker cp $(docker ps -ql):/etc/avahi .
 docker rm $(docker ps -ql)
 ```
 
-### Start the container 
+# Start the container 
 
 ```bash
 docker run -d --net=host -v $(pwd)/avahi:/etc/avahi solidnerd/avahi:0.6.32
