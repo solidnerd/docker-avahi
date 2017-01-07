@@ -13,6 +13,12 @@ docker cp $(docker ps -ql):/etc/avahi .
 docker rm $(docker ps -ql)
 ```
 
+### Disable DBus for starting the container
+Edit your `avahi-daemon.conf` and set the following line.
+
+```bash
+enable-dbus=no
+```
 # Start the container 
 
 ```bash
