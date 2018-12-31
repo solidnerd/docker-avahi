@@ -1,7 +1,7 @@
-FROM alpine:3.4
+FROM alpine:3.8
 
-ARG AVAHI_VERSION=0.6.32
-ARG AVAHI_RELEASE=r0
+ARG AVAHI_VERSION=0.7
+ARG AVAHI_RELEASE=r1
 ARG BUILD_DATE
 ARG VCS_REF
 
@@ -16,7 +16,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.vcs-url="https://github.com/solidnerd/docker-avahi.git" \
       org.label-schema.vcs-type="Git"
 
-RUN env && apk add --no-cache \
+RUN apk add --no-cache \
     avahi=$AVAHI_VERSION-$AVAHI_RELEASE \
     avahi-tools=$AVAHI_VERSION-$AVAHI_RELEASE 
 

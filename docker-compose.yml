@@ -3,7 +3,7 @@ version: '2'
 services:
   avahi:
     container_name: avahi
-    image: solidnerd/avahi:0.6.32
+    image: solidnerd/avahi:0.7
     network_mode: host
     volumes:
     - ./avahi:/etc/avahi:ro
