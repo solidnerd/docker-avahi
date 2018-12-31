@@ -8,9 +8,9 @@ docker avahi
 ## Get initialize configuration:
 
 ```bash
-docker create solidnerd/avahi:0.6.32
-docker cp $(docker ps -ql):/etc/avahi .
-docker rm $(docker ps -ql)
+docker create --name avahi-config solidnerd/avahi:0.7
+docker cp avahi-config:/etc/avahi .
+docker rm avahi-config
 ```
 
 ### Disable DBus for starting the container
@@ -22,7 +22,7 @@ enable-dbus=no
 # Start the container 
 
 ```bash
-docker run -d --net=host -v $(pwd)/avahi:/etc/avahi solidnerd/avahi:0.6.32
+docker run -d --net=host -v $(pwd)/avahi:/etc/avahi solidnerd/avahi:0.7
 ```
 
 ## Build the image
